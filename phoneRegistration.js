@@ -61,6 +61,23 @@ const completeRegistration = () => {
   }
 };
 
+// Allows user to submit the form with enter key
+areaCode.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    completeRegistration();
+
+    event.preventDefault();
+  }
+});
+
+// Allows user to submit the form with enter key
+phoneNumber.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    completeRegistration();
+  }
+});
+
 // Removes the error message when the user starts typing area code again
 areaCode.addEventListener('keydown', (e) => {
   areaCodeError.style.display = 'none';

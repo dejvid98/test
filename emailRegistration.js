@@ -54,4 +54,12 @@ const completeRegistration = () => {
   }
 };
 
+// Allows user to submit the form with enter key
+email.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    completeRegistration();
+  }
+});
+
 submitButton.addEventListener('click', completeRegistration);
