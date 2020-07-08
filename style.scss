@@ -289,6 +289,60 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+  }
+  .navigation {
+    height: 7rem;
+  }
+  .navigation__list {
+    flex-direction: column;
+
+    .navigation__listItem {
+      margin-bottom: 0.2rem;
+      width: 100%;
+    }
+  }
+
+  .wrapper__section {
+    margin: 0;
+    position: relative;
+    right: 1rem;
+    .wrapper__messageWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 6rem;
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        max-width: 17rem;
+      }
+    }
+  }
+
+  .wrapper__illustration {
+    display: none;
+  }
+
+  .wrapper__formWrapper {
+    margin-top: 8rem;
+    form {
+      padding: 3rem 2rem 3rem 2rem !important;
+    }
+  }
+
+  .form__emailError,
+  .form__areaCodeError,
+  .form__phoneNumberError,
+  .form__tosError {
+    width: 20rem;
+  }
+}
+
 @keyframes moveInFromRight {
   0% {
     opacity: 0;
