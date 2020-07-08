@@ -141,6 +141,17 @@ header {
   background-color: #fff;
   border-radius: 0.8rem;
   box-shadow: 20px 20px 50px #d3d3d3, -20px -20px 50px #ffffff;
+  animation: moveInFromBottom 0.4s;
+}
+@keyframes moveInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .wrapper .wrapper__formWrapper img {
   height: 38rem;
