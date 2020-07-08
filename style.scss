@@ -108,6 +108,36 @@ header {
   justify-content: center;
   align-items: center;
 
+  .wrapper__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #wrapper__image {
+      height: 30rem;
+    }
+    .wrapper__messageWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 30rem;
+      margin-left: 2rem;
+
+      h1 {
+        font-size: 3rem;
+        color: $dark;
+        letter-spacing: 1px;
+      }
+      h3 {
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        color: #777;
+        width: 33rem;
+      }
+    }
+  }
+
   .wrapper__formWrapper {
     display: flex;
     justify-content: center;
@@ -121,6 +151,26 @@ header {
       height: 38rem;
       border-top-right-radius: 2rem;
       border-bottom-right-radius: 2rem;
+    }
+
+    .loader {
+      border: 16px solid #f3f3f3; /* Light grey */
+      border-top: 16px solid $blue; /* Blue */
+      border-radius: 50%;
+      margin: 12.5rem;
+      width: 200px;
+      height: 200px;
+      animation: spin 0.6s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     form {
@@ -176,6 +226,28 @@ header {
         margin-bottom: 1rem;
       }
 
+      .form__areaCodeError {
+        display: none;
+        animation: moveInFromRight linear 0.2s;
+        background-color: $brightRed;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.2rem 4rem 0.2rem 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .form__phoneNumberError {
+        display: none;
+        animation: moveInFromRight linear 0.2s;
+        background-color: $brightRed;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.2rem 4rem 0.2rem 4rem;
+        margin-bottom: 1rem;
+      }
+
       .form__tosError {
         display: none;
         animation: moveInFromRight linear 0.2s;
@@ -191,20 +263,14 @@ header {
         margin: 1rem 0rem 1rem 0rem;
       }
 
-      .form__emailSubmit {
+      .form__submitButton {
         margin-top: 1rem;
         background-color: $red;
         font-weight: 500;
         transition: all 0.1s linear;
         &:hover {
-          transform: translateY(-3px);
+          transform: translateY(-2px);
         }
-      }
-
-      .form__mobileSubmit {
-        margin-top: 1rem;
-        background-color: $red;
-        font-weight: 500;
       }
     }
   }

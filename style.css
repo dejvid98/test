@@ -93,6 +93,33 @@ header {
   justify-content: center;
   align-items: center;
 }
+.wrapper .wrapper__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .wrapper__section #wrapper__image {
+  height: 30rem;
+}
+.wrapper .wrapper__section .wrapper__messageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30rem;
+  margin-left: 2rem;
+}
+.wrapper .wrapper__section .wrapper__messageWrapper h1 {
+  font-size: 3rem;
+  color: #364f6b;
+  letter-spacing: 1px;
+}
+.wrapper .wrapper__section .wrapper__messageWrapper h3 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: #777;
+  width: 33rem;
+}
 .wrapper .wrapper__formWrapper {
   display: flex;
   justify-content: center;
@@ -106,6 +133,26 @@ header {
   height: 38rem;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
+}
+.wrapper .wrapper__formWrapper .loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #61dafb;
+  /* Blue */
+  border-radius: 50%;
+  margin: 12.5rem;
+  width: 200px;
+  height: 200px;
+  animation: spin 0.6s linear infinite;
+  display: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .wrapper .wrapper__formWrapper form {
   padding: 3.5rem 8rem;
@@ -153,6 +200,26 @@ header {
   padding: 0.2rem 4rem 0.2rem 4rem;
   margin-bottom: 1rem;
 }
+.wrapper .wrapper__formWrapper form .form__areaCodeError {
+  display: none;
+  animation: moveInFromRight linear 0.2s;
+  background-color: #ff5e5e;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.2rem 4rem 0.2rem 4rem;
+  margin-bottom: 1rem;
+}
+.wrapper .wrapper__formWrapper form .form__phoneNumberError {
+  display: none;
+  animation: moveInFromRight linear 0.2s;
+  background-color: #ff5e5e;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.2rem 4rem 0.2rem 4rem;
+  margin-bottom: 1rem;
+}
 .wrapper .wrapper__formWrapper form .form__tosError {
   display: none;
   animation: moveInFromRight linear 0.2s;
@@ -166,19 +233,14 @@ header {
 .wrapper .wrapper__formWrapper form .form__checkboxWrapper {
   margin: 1rem 0rem 1rem 0rem;
 }
-.wrapper .wrapper__formWrapper form .form__emailSubmit {
+.wrapper .wrapper__formWrapper form .form__submitButton {
   margin-top: 1rem;
   background-color: #fc5185;
   font-weight: 500;
   transition: all 0.1s linear;
 }
-.wrapper .wrapper__formWrapper form .form__emailSubmit:hover {
-  transform: translateY(-3px);
-}
-.wrapper .wrapper__formWrapper form .form__mobileSubmit {
-  margin-top: 1rem;
-  background-color: #fc5185;
-  font-weight: 500;
+.wrapper .wrapper__formWrapper form .form__submitButton:hover {
+  transform: translateY(-2px);
 }
 
 @keyframes moveInFromRight {

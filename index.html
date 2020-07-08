@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration form test</title>
+    <title>Email registration</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -14,7 +14,6 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
     <script src="https://use.fontawesome.com/d43103e738.js"></script>
-    <script type="module" src="script.js"></script>
   </head>
   <body>
     <header>
@@ -38,6 +37,8 @@
 
     <main class="wrapper">
       <section class="wrapper__formWrapper">
+        <div class="loader"></div>
+
         <form class="wrapper__form">
           <p class="form__welcomeMessage">Welcome!</p>
           <div class="form__emailError">
@@ -67,7 +68,7 @@
 
           <div class="form__checkboxWrapper">
             <label class="form__label checkbox">
-              <input type="checkbox" class="form_tosCheckbox" checked />
+              <input type="checkbox" class="form__tosCheckbox" checked />
               I agree to the <a href="#">terms and conditions</a>
             </label>
           </div>
@@ -79,15 +80,16 @@
             </label>
           </div>
 
-          <button type="button" class="form__emailSubmit button is-link">
+          <button type="button" class="form__submitButton button is-link">
             Submit
           </button>
         </form>
         <img
-          src="laptopIllustration.svg"
+          src="/assets/laptopIllustration.svg"
           alt="Form registration illustration"
         />
       </section>
     </main>
   </body>
+  <script src="emailRegistration.js"></script>
 </html>

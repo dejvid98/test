@@ -14,7 +14,6 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
     <script src="https://use.fontawesome.com/d43103e738.js"></script>
-    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -40,6 +39,15 @@
       <section class="wrapper__formWrapper">
         <form class="wrapper__form">
           <p class="form__welcomeMessage">Welcome!</p>
+          <div class="form__areaCodeError">
+            <p>Please enter a valid area code</p>
+          </div>
+          <div class="form__phoneNumberError">
+            <p>Please enter a valid phone number</p>
+          </div>
+          <div class="form__tosError">
+            <p>Please accept terms and conditions</p>
+          </div>
           <label class="form__label" for="email">Phone number:</label><br />
           <div class="form__numberInputWrapper">
             <input
@@ -61,7 +69,6 @@
           </div>
 
           <br />
-
           <label class="form__label" for="currency">Currency:</label><br />
           <div class="form__selectWrapper select">
             <select name="currency" id="currency">
@@ -73,7 +80,7 @@
 
           <div class="form__checkboxWrapper">
             <label class="form__label checkbox">
-              <input type="checkbox" />
+              <input type="checkbox" class="form__tosCheckbox" checked />
               I agree to the <a href="#">terms and conditions</a>
             </label>
           </div>
@@ -85,13 +92,16 @@
             </label>
           </div>
 
-          <button class="form__submitButton button is-link">Submit</button>
+          <button type="button" class="form__submitButton button is-link">
+            Submit
+          </button>
         </form>
         <img
-          src="laptopIllustration.svg"
+          src="/assets/laptopIllustration.svg"
           alt="Form registration illustration"
         />
       </section>
     </main>
   </body>
+  <script src="phoneRegistration.js"></script>
 </html>
