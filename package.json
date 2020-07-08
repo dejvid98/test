@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Registration form test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dejvid98/test.git"
+  },
+  "author": "David Sucur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dejvid98/test/issues"
+  },
+  "homepage": "https://github.com/dejvid98/test#readme",
+  "dependencies": {
+    "eslint-config-airbnb": "^18.2.0",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
+}

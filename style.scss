@@ -1,0 +1,223 @@
+$blue: #61dafb;
+$dark: #364f6b;
+$white: #f0f0f0;
+$red: #fc5185;
+$brightRed: #ff5e5e;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif !important;
+  height: 100vh;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  background-color: $dark;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+
+  .navigation__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      color: #fff;
+      list-style-type: none;
+      cursor: pointer;
+    }
+
+    .navigation__listItem {
+      margin-right: 2rem;
+      margin-left: 2rem;
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 1.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      overflow: hidden;
+      padding: 0.3rem;
+      height: 100%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: $red;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+
+      &:hover:before,
+      &:focus:before,
+      &:active:before {
+        left: 0;
+        right: 0;
+      }
+
+      i {
+        margin-right: 1rem;
+        position: relative;
+        top: 0.2rem;
+        font-size: 1.5rem;
+        color: $red;
+        padding-bottom: 0.6rem;
+      }
+
+      .navigation__link {
+        text-decoration: none;
+        color: #fff;
+        &:visited {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  height: 100%;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper__formWrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 2rem !important;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    box-shadow: 20px 20px 50px #d3d3d3, -20px -20px 50px #ffffff;
+
+    img {
+      height: 38rem;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+
+    form {
+      padding: 3.5rem 8rem;
+
+      .form__welcomeMessage {
+        font-size: 2rem;
+        letter-spacing: 1.2px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        color: $dark;
+      }
+      .form__numberInputWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form__areaCode {
+        width: 6rem;
+        margin-right: 1rem;
+        margin-top: 0.6rem;
+      }
+
+      .form__phoneNumber {
+        width: 15rem;
+        margin-top: 0.6rem;
+      }
+
+      .form_emailInput {
+        margin-bottom: 2rem;
+        margin-top: 0.6rem;
+      }
+
+      .form__selectWrapper {
+        margin-bottom: 2rem;
+        margin-top: 0.6rem;
+      }
+
+      .form__label {
+        color: #777;
+        letter-spacing: 1px;
+      }
+
+      .form__emailError {
+        display: none;
+        animation: moveInFromRight linear 0.2s;
+        background-color: $brightRed;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.2rem 4rem 0.2rem 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .form__tosError {
+        display: none;
+        animation: moveInFromRight linear 0.2s;
+        background-color: $brightRed;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.2rem 4rem 0.2rem 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .form__checkboxWrapper {
+        margin: 1rem 0rem 1rem 0rem;
+      }
+
+      .form__emailSubmit {
+        margin-top: 1rem;
+        background-color: $red;
+        font-weight: 500;
+        transition: all 0.1s linear;
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+
+      .form__mobileSubmit {
+        margin-top: 1rem;
+        background-color: $red;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
