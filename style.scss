@@ -135,6 +135,19 @@ header {
         color: #777;
         width: 33rem;
       }
+      .wrapper__loginButton {
+        background-color: $red;
+        color: #fff;
+        font-size: 1.3rem;
+        border-radius: 2rem;
+        margin-top: 3rem;
+        font-weight: 500;
+        padding: 0.3rem 3rem;
+        transition: all 0.1s linear;
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
     }
   }
 
@@ -269,7 +282,7 @@ header {
         font-weight: 500;
         transition: all 0.1s linear;
         &:hover {
-          transform: translateY(-2px);
+          filter: brightness(0.8);
         }
       }
     }

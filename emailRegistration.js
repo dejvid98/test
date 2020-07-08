@@ -40,7 +40,7 @@ tosCheckmark.addEventListener('change', removeCheckboxError);
 // Removes the error message when the user starts typing email again
 email.addEventListener('keydown', (e) => {
   emailError.style.display = 'none';
-  emailError.classList.remove('is-danger');
+  email.classList.remove('is-danger');
 });
 
 // Completes registration after validating input

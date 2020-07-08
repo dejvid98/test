@@ -120,6 +120,19 @@ header {
   color: #777;
   width: 33rem;
 }
+.wrapper .wrapper__section .wrapper__messageWrapper .wrapper__loginButton {
+  background-color: #fc5185;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  font-weight: 500;
+  padding: 0.3rem 3rem;
+  transition: all 0.1s linear;
+}
+.wrapper .wrapper__section .wrapper__messageWrapper .wrapper__loginButton:hover {
+  filter: brightness(0.8);
+}
 .wrapper .wrapper__formWrapper {
   display: flex;
   justify-content: center;
@@ -240,7 +253,7 @@ header {
   transition: all 0.1s linear;
 }
 .wrapper .wrapper__formWrapper form .form__submitButton:hover {
-  transform: translateY(-2px);
+  filter: brightness(0.8);
 }
 
 @keyframes moveInFromRight {

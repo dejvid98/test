@@ -50,11 +50,34 @@ const formatAreaCode = () => {
   if (!areaCode.value) areaCode.value = `+${areaCode.value}`;
 };
 
-// Listens for a checkbox to be checked to remove the error
+// Completes registration after validating input
+const completeRegistration = () => {
+  if (phoneFormValidation()) {
+    form.style.display = 'none';
+    loader.style.display = 'block';
+    setTimeout(() => {
+      window.location.href = 'registrationSuccess.html';
+    }, 3000);
+  }
+};
+
+// Removes the error message when the user starts typing area code again
+areaCode.addEventListener('keydown', (e) => {
+  areaCodeError.style.display = 'none';
+  areaCode.classList.remove('is-danger');
+});
+
+// Removes the error message when the user starts typing phone number again
+phoneNumber.addEventListener('keydown', (e) => {
+  phoneNumberError.style.display = 'none';
+  phoneNumber.classList.remove('is-danger');
+});
+
+// Listens for the checkbox to be checked to remove the error
 tosCheckmark.addEventListener('change', removeCheckboxError);
 
-// Performs a validation when user clicks on a submit button
-submitButton.addEventListener('click', phoneFormValidation);
+// Performs a validation when a user clicks on a submit button
+submitButton.addEventListener('click', completeRegistration);
 
 // Automatically formats area code input when user types
 areaCode.addEventListener('keydown', formatAreaCode);
